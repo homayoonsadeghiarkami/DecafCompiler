@@ -3,6 +3,8 @@ from antlr4 import *
 from io import StringIO
 from typing import TextIO
 import sys
+# test
+#homa is bitch
 
 
 def serializedATN():
@@ -56,18 +58,18 @@ class DecafLexerer(Lexer):
     modeNames = ["DEFAULT_MODE"]
 
     literalNames = ["<INVALID>",
-            "'<'", "'>'", "'='", "';'", "':='"]
+                    "'<'", "'>'", "'='", "';'", "':='"]
 
-    symbolicNames = [ "<INVALID>",
-            "STRING", "WS", "LINE_COMMENT", "LPAREN", "RPAREN", "EQUALS", 
-            "SEMICO", "ASSIGN" ]
+    symbolicNames = ["<INVALID>",
+                     "STRING", "WS", "LINE_COMMENT", "LPAREN", "RPAREN", "EQUALS",
+                     "SEMICO", "ASSIGN"]
 
-    ruleNames = [ "STRING", "WS", "LINE_COMMENT", "LPAREN", "RPAREN", "EQUALS", 
-                  "SEMICO", "ASSIGN" ]
+    ruleNames = ["STRING", "WS", "LINE_COMMENT", "LPAREN", "RPAREN", "EQUALS",
+                 "SEMICO", "ASSIGN"]
 
     grammarFileName = "DecafLexerer.g4"
 
-    def __init__(self, input=None, output:TextIO = sys.stdout):
+    def __init__(self, input=None, output: TextIO = sys.stdout):
         super().__init__(input, output)
         self.checkVersion("4.9")
         self._interp = LexerATNSimulator(
@@ -75,5 +77,3 @@ class DecafLexerer(Lexer):
         )
         self._actions = None
         self._predicates = None
-
-
