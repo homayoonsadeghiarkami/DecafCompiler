@@ -1,28 +1,17 @@
 from antlr4 import *
 from DecafLexerer import DecafLexerer
 
-_FILENAME = '''// What to do in the morning
-func morning <
-  name := "Jay";
-  greet morning=true input=@name;
-  eat cereals;
-  attend class="CS101";
->
-
-// What to do at night
-func night <
-  brush_teeth;
-  sleep hours=8;
->'''
+_FILENAME = 'sample.script'
 
 
 def main():
-    input_stream = InputStream(_FILENAME)
-    lexer = DecafLexerer(input_stream)
-    toks = CommonTokenStream(lexer)
-    toks.fetch(500)
-    for token in toks.tokens:
-        print(token)
+    with open(_FILENAME, 'r') as reader:
+        input_stream = InputStream(reader.read())
+        lexer = DecafLexerer(input_stream)
+        token = lexer.nextToken()
+        while token.type != Token.EOF:
+            print(token.text)
+            token = lexer.nextToken()
 
 
 if __name__ == '__main__':
