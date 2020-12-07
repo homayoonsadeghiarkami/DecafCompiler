@@ -6,12 +6,12 @@ _FILENAME = 'sample.script'
 
 def getTokenType(token_type):
     switcher = {
-        DecafLexerer.STRING: "STRING",
-        DecafLexerer.LPAREN: "LPAREN",
-        DecafLexerer.RPAREN: "RPAREN",
-        DecafLexerer.EQUALS: "EQUALS",
-        DecafLexerer.SEMICO: "SEMICO",
-        DecafLexerer.ASSIGN: "ASSIGN"
+        DecafLexerer.T_INT: "T_INT",
+        DecafLexerer.T_DOUBLE: "T_DOUBLE",
+        DecafLexerer.T_BOOLEAN: "T_BOOLEAN",
+        DecafLexerer.T_ID: "T_ID",
+        DecafLexerer.T_KEY_WORDS: "T_KEY_WORDS",
+        DecafLexerer.T_PUNCTUATION: "T_PUNCTUATION"
     }
     return switcher.get(token_type, "OTHER")
 

@@ -1,13 +1,11 @@
 // What to do in the morning
-func morning <
-  name := "Jay";
+void morning {
+  name = "Jay";
+  for;
+  int 123;
   greet morning=true input=@name;
   eat cereals;
   attend class="CS101";
->
+}
 
-// What to do at night
-func night <
-  brush_teeth;
-  sleep hours=8;
->
+/* What to do at night */
