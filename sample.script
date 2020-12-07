@@ -1,9 +1,9 @@
 // What to do in the morning
 void morning {
-  name = "Jay";
+  string name = "Jay";
   for;
   int 123;
-  greet morning=true input=@name;
+  greet morning=true input=name_;
   eat cereals;
   attend class="CS101";
 }

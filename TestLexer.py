@@ -10,6 +10,7 @@ def getTokenType(token_type):
         DecafLexerer.T_DOUBLE: "T_DOUBLE",
         DecafLexerer.T_BOOLEAN: "T_BOOLEAN",
         DecafLexerer.T_ID: "T_ID",
+        DecafLexerer.T_STRING: "T_STRING",
         DecafLexerer.T_KEY_WORDS: "T_KEY_WORDS",
         DecafLexerer.T_PUNCTUATION: "T_PUNCTUATION"
     }
