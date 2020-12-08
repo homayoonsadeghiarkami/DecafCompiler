@@ -1,5 +1,5 @@
 // Name our lexer (the name must match the filename)
-lexer grammar DecafLexerer;
+lexer grammar DecafLexer;
 
 // Skip all spaces, tabs, newlines
 WS : [ \t\r\n]+ -> skip ;

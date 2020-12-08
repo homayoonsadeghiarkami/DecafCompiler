@@ -1,4 +1,4 @@
-# Generated from src\DecafLexerer.g4 by ANTLR 4.9
+# Generated from src\DecafLexer.g4 by ANTLR 4.9
 from antlr4 import *
 from io import StringIO
 from typing.io import TextIO
@@ -137,7 +137,7 @@ def serializedATN():
         return buf.getvalue()
 
 
-class DecafLexerer(Lexer):
+class DecafLexer(Lexer):
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
@@ -170,7 +170,7 @@ class DecafLexerer(Lexer):
                   "T_STRING", "ESC", "T_INT", "T_HEX", "T_DOUBLE", "T_BOOLEAN", 
                   "T_ID", "T_PUNCTUATION" ]
 
-    grammarFileName = "DecafLexerer.g4"
+    grammarFileName = "DecafLexer.g4"
 
     def __init__(self, input=None, output:TextIO = sys.stdout):
         super().__init__(input, output)
